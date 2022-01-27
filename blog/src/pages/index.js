@@ -17,6 +17,7 @@ const IndexPage = () => (
       quality={95}
       formats={["auto", "webp", "avif"]}
       alt="A Gatsby astronaut"
+      loading="eager"
       style={{ marginBottom: `1.45rem` }}
     />
     <p>
