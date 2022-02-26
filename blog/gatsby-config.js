@@ -14,6 +14,10 @@ module.exports = {
     }
   },
   plugins: [
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+
     {
       resolve: `gatsby-source-contentful`,
       options: {
@@ -21,8 +25,7 @@ module.exports = {
         accessToken: `${process.env.ACCESS_TOKEN}`
       }
     },
-    `gatsby-transformer-remark`,
-    `gatsby-plugin-react-helmet`,
+    
     {
       resolve: `gatsby-source-filesystem`,
       options: {
