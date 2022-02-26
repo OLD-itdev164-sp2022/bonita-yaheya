@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import {  graphql, Link, } from "gatsby"
 
 import Layout from "../components/layout"
 //import Image from "../components/images"
@@ -15,8 +15,8 @@ const About = ({ data }) =>{
             <h1>About Us</h1>
             <p>{`${company} was started by ${name} in 2021 `}</p>
             <p>{`At ${company} we just make blogs!`}</p>
+            <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
 
-            <div>
                 <StaticImage src="../images/gatsby-astronaut.png" 
                  alt="A gatsby astronaut" 
                  width={300} 

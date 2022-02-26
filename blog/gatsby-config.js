@@ -14,8 +14,6 @@ module.exports = {
     }
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-contentful`,
       options: {
@@ -23,8 +21,8 @@ module.exports = {
         accessToken: `${process.env.ACCESS_TOKEN}`
       }
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    `gatsby-transformer-remark`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -32,6 +30,7 @@ module.exports = {
           path: `${__dirname}/src/images`,
       },
     },
+
     `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     {
