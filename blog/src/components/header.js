@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import styled from 'styled-components'
 
 const Outer = styled.header`
-  background: rebeccapurple;
+  background: ${props => props.theme.header.backgroundColor};
   margin-Bottom: 1.45rem;
 `
 const Inner = styled.div `
