@@ -4,11 +4,11 @@ import { Link } from "gatsby"
 import styled from 'styled-components'
 
 const Outer = styled.header`
-  background: `rebeccapurple;
-  marginBottom: `1.45rem;
+  background: rebeccapurple;
+  margin-Bottom: 1.45rem;
 `
 const Inner = styled.div `
-      margin: 0 auto;
+      margin: 0px auto;
       maxWidth: 960px;
       padding: 1.45rem 1.0875rem;
 `
@@ -27,14 +27,12 @@ const StyledLink = styled(Link)`
 `
 
 const Header = ({ siteTitle }) => (
-
   <Outer>
     <Inner>
       <H1>
         <StyledLink to="/">
           {siteTitle}
         </StyledLink>
-
       </H1>
     </Inner>
   </Outer>
