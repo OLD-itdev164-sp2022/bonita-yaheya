@@ -1,2 +1,2 @@
-import GlobalStyle from './GlobalStyle'
+import GlobalStyle from './GlobalStyle.js'
 export default GlobalStyle

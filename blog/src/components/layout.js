@@ -11,7 +11,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import styled, { ThemeProvider } from 'styled-components'
 
 import { Gray } from './themes/Gray'
-import Header from "./header"
+import { Header } from "./Header"
 import GlobalStyle from './GlobalStyle'
 
 const Content = styled.div`
@@ -51,7 +51,7 @@ const Layout = ({ children }) => {
       </Content>
       </ThemeProvider>
   )
-}   
+        }  
                 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
