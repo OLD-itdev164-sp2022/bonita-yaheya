@@ -5,11 +5,11 @@ import styled from 'styled-components'
 
 const Outer = styled.header`
   background: ${props => props.theme.header.backgroundColor};
-  margin-Bottom: 1.45rem;
+  margin-bottom: 1.45rem
 `
 const Inner = styled.div `
       margin: 0px auto;
-      maxWidth: 960px;
+      max-width: 960px;
       padding: 1.45rem 1.0875rem;
 `
 
@@ -46,4 +46,4 @@ Header.defaultProps = {
   siteTitle: ``,
 }
 
-export default Header
+export { Header }

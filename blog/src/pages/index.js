@@ -1,31 +1,31 @@
 import * as React from "react"
-import { graphql, Link } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image"
+import { Link } from "gatsby"
+
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import { List, ListItem } from "../components/List"
 
 const IndexPage = ({ data }) => (
   <Layout>
     <Seo title="Home" />
-    <ul>
-      {data.allContentfulBlogPost.edges.map(edge => (
-        <li>
+    <List width={[1, 1 / 2, 2/ 3]} p ={2}>
+      {
+      data.allContentfulBlogPost.edges.map(edge => (
+        <ListItem p={3}>
           <Link to={edge.node.slug} key={edge.node.id}>
             {edge.node.title} </Link>
             <div>
-              <GatsbyImage
-              image={edge.node.heroImageimage.gatsbyImageData}
-              alt="test" />
+              <img src={edge.node.heroImage.fluid.src} alt="hero image" />
             </div>
             <div>
               {edge.node.body.childMarkdownRemark.excerpt}
             </div>
-        </li>
+        </ListItem>
 
       ))
       }
-      </ul>
+      </List>
     </Layout>
 )
 
@@ -39,17 +39,15 @@ export const query = graphql`
         id
         title
         slug
-        body {
+        heroImage {
+          fluid(maxWidth:600) {
+            src
+          }
+        }
+        body {}
           childMarkdownRemark {
             excerpt
           }
-        }
-        heroImage {
-          gatsbyImageData(
-            layout: CONSTRAINED
-            placeholder: BLURRED
-            width: 300
-          )
         }
       }
     }
