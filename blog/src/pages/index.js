@@ -44,7 +44,7 @@ export const query = graphql`
             src
           }
         }
-        body {}
+        body {
           childMarkdownRemark {
             excerpt
           }
